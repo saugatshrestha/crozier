@@ -14,8 +14,8 @@ body {
 body {
     letter-spacing: normal;
     @include font-smoothing(on);
-    font-size: rem(17px);
-    line-height: rem(28px);
+    font-size: 1.8rem;
+    line-height: 2.8rem;
 
     &.prevent-scrolling {
         @extend .overflow-hidden, .position-fixed, .w-100;
@@ -42,7 +42,7 @@ button,
 }
 
 p {
-    margin-bottom: rem(32px);
+    margin-bottom: 3.2rem;
 
     &:last-child {
         @extend .mb-0;
@@ -51,11 +51,11 @@ p {
 
 ul,
 ol {
-    padding-left: rem(20px);
+    padding-left: 2rem;
 
     > li {
-        padding-left: rem(4px);
-        margin-bottom: rem(10px);
+        padding-left: .4rem;
+        margin-bottom: 1rem;
 
         &:last-child {
             margin-bottom: 0;
@@ -91,5 +91,5 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    box-shadow: 0 0 0 130px $white inset !important;
+    box-shadow: 0 0 0 13rem $white inset !important;
 }

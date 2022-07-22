@@ -2,7 +2,7 @@
 //     margin-bottom: rem(0);
 // }
 @mixin last-child() {
-  &:last-of-type {
-    @content;
-  }
+    &:last-of-type {
+        @content;
+    }
 }

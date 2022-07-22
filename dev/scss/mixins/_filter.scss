@@ -8,5 +8,5 @@
 // contrast       ex: filter: contrast(200%);
 // blur           ex: filter: blur(2px);
 @mixin filter($filter-type, $filter-amount) {
-  filter: $filter-type + unquote('(#{$filter-amount})');
+    filter: $filter-type + unquote('(#{$filter-amount})');
 }

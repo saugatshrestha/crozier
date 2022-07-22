@@ -17,7 +17,7 @@
         font-weight: 500 !important;
 
         &::after {
-            content: "" !important;
+            content: '' !important;
             background-color: $primary !important;
             width: 100% !important;
             height: rem(2px) !important;
@@ -219,19 +219,6 @@
     }
 }
 
-// List Items
-.list {
-    &-unstyled {
-        > li {
-            @extend .pl-0;
-
-            &::before {
-                @extend .d-none;
-            }
-        }
-    }
-}
-
 // Flex Assets
 .flex {
     &-rows-break {
@@ -295,12 +282,54 @@
     }
 }
 
-// Extra large Grid
-.row {
-    &--xl {
-        @include media-breakpoint-up(xxl) {
-            // margin: rem(0 -10.58805%);
-            margin: rem(0 -50px);
+figure {
+    margin: rem(0px);
+}
+
+img {
+    @extend .mw-100;
+}
+
+ul {
+    margin: rem(0px);
+    padding: rem(0px);
+    li {
+        list-style-type: none;
+    }
+}
+
+.collapse-text {
+    max-height: rem(140px);
+    position: relative;
+    overflow-y: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: rem(74px);
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(0, 43, 73, 0), $primary);
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+    &--light {
+        &::before {
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+        }
+    }
+    @include media-breakpoint-up(md) {
+        max-height: initial;
+    }
+    &.expand {
+        max-height: initial;
+        &::before {
+            display: none;
         }
     }
 }

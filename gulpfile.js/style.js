@@ -11,65 +11,72 @@ import sourcemaps from 'gulp-sourcemaps';
 import sass from 'gulp-sass';
 import bs from 'browser-sync';
 
-
 const paths = {
     styles: {
         src: 'dev/scss/*.scss',
-        dest: 'dist/css/'
+        dest: 'dist/css/',
     },
     moduleStyles: {
         src: 'dev/scss/styles/*.scss',
-        dest: 'dist/css/styles/'
-    }
+        dest: 'dist/css/styles/',
+    },
 };
 var versionConfig = {
-    value: "%MDS%",
+    value: '%MDS%',
     append: {
-        key: "v",
-        to: ["css", "js"],
+        key: 'v',
+        to: ['css', 'js'],
     },
 };
 
 function modules() {
-
-    return gulp.src(paths.moduleStyles.src)
-        .pipe(plumber())
-        .pipe(sourcemaps.init())
-        .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-        .pipe(cleanCSS())
-        .pipe(postcss([autoprefixer({overrideBrowserslist: ['last 2 versions', 'iOS 8']})]))
-        // .pipe(
-        //   autoprefixer({
-        //       browsers: ["last 2 versions"],
-        //       cascade: false,
-        //   })
-        // )
-        .pipe(rename({
-            suffix: ".min"
-        }))
-        .pipe(sourcemaps.write("./maps"))
-        .pipe(gulp.dest(paths.moduleStyles.dest))
-        .pipe(bs.stream());
+    return (
+        gulp
+            .src(paths.moduleStyles.src)
+            .pipe(plumber())
+            .pipe(sourcemaps.init())
+            .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+            .pipe(cleanCSS())
+            .pipe(postcss([autoprefixer({ overrideBrowserslist: ['last 2 versions', 'iOS 8'] })]))
+            // .pipe(
+            //   autoprefixer({
+            //       browsers: ["last 2 versions"],
+            //       cascade: false,
+            //   })
+            // )
+            .pipe(
+                rename({
+                    suffix: '.min',
+                })
+            )
+            .pipe(sourcemaps.write('./maps'))
+            .pipe(gulp.dest(paths.moduleStyles.dest))
+            .pipe(bs.stream())
+    );
 }
 function styles() {
-
-    return gulp.src(paths.styles.src)
-        .pipe(plumber())
-        .pipe(sourcemaps.init())
-        .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-        .pipe(cleanCSS())
-        .pipe(postcss([autoprefixer({overrideBrowserslist: ['last 2 versions', 'iOS 8']})]))
-        // .pipe(
-        //   autoprefixer({
-        //       browsers: ["last 2 versions"],
-        //       cascade: false,
-        //   })
-        // )
-        .pipe(rename({
-            suffix: ".min"
-        }))
-        .pipe(sourcemaps.write("./maps"))
-        .pipe(gulp.dest(paths.styles.dest))
-        .pipe(bs.stream());
+    return (
+        gulp
+            .src(paths.styles.src)
+            .pipe(plumber())
+            .pipe(sourcemaps.init())
+            .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+            .pipe(cleanCSS())
+            .pipe(postcss([autoprefixer({ overrideBrowserslist: ['last 2 versions', 'iOS 8'] })]))
+            // .pipe(
+            //   autoprefixer({
+            //       browsers: ["last 2 versions"],
+            //       cascade: false,
+            //   })
+            // )
+            .pipe(
+                rename({
+                    suffix: '.min',
+                })
+            )
+            .pipe(sourcemaps.write('./maps'))
+            .pipe(gulp.dest(paths.styles.dest))
+            .pipe(bs.stream())
+    );
 }
-module.exports = {modules,styles};
+module.exports = { modules, styles };

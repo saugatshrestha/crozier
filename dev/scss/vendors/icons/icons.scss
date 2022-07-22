@@ -28,12 +28,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-
-.icon-account {
-    &:before {
-        content: $icon-account;
-    }
-}
 .icon-chevron-down {
     &:before {
         content: $icon-chevron-down;
@@ -49,14 +43,39 @@
         content: $icon-chevron-right;
     }
 }
-.icon-chevron-top {
+.icon-chevron-up {
     &:before {
-        content: $icon-chevron-top;
+        content: $icon-chevron-up;
     }
 }
-.icon-twitter {
+.icon-down {
     &:before {
-        content: $icon-twitter;
+        content: $icon-down;
+    }
+}
+.icon-top {
+    &:before {
+        content: $icon-top;
+    }
+}
+.icon-left {
+    &:before {
+        content: $icon-left;
+    }
+}
+.icon-right {
+    &:before {
+        content: $icon-right;
+    }
+}
+.icon-external {
+    &:before {
+        content: $icon-external;
+    }
+}
+.icon-edit {
+    &:before {
+        content: $icon-edit;
     }
 }
 .icon-facebook {
@@ -64,9 +83,14 @@
         content: $icon-facebook;
     }
 }
-.icon-linkedin {
+.icon-youtube {
     &:before {
-        content: $icon-linkedin;
+        content: $icon-youtube;
+    }
+}
+.icon-info {
+    &:before {
+        content: $icon-info;
     }
 }
 .icon-instagram {
@@ -74,14 +98,29 @@
         content: $icon-instagram;
     }
 }
-.icon-youtube {
+.icon-twitter {
     &:before {
-        content: $icon-youtube;
+        content: $icon-twitter;
     }
 }
-.icon-mail {
+.icon-linkedin {
     &:before {
-        content: $icon-mail;
+        content: $icon-linkedin;
+    }
+}
+.icon-localtion {
+    &:before {
+        content: $icon-localtion;
+    }
+}
+.icon-tick {
+    &:before {
+        content: $icon-tick;
+    }
+}
+.icon-logo {
+    &:before {
+        content: $icon-logo;
     }
 }
 .icon-play {
@@ -89,9 +128,19 @@
         content: $icon-play;
     }
 }
-.icon-hamburger {
+.icon-camera {
     &:before {
-        content: $icon-hamburger;
+        content: $icon-camera;
+    }
+}
+.icon-plus {
+    &:before {
+        content: $icon-plus;
+    }
+}
+.icon-burger {
+    &:before {
+        content: $icon-burger;
     }
 }
 .icon-search {

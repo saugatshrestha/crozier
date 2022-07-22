@@ -9,30 +9,30 @@ import bs from 'browser-sync';
 import version from 'gulp-version-number';
 
 var versionConfig = {
-    value: "%MDS%",
+    value: '%MDS%',
     append: {
-        key: "v",
-        to: ["css", "js"],
+        key: 'v',
+        to: ['css', 'js'],
     },
 };
 
 export function htmlmin2() {
     return gulp
-        .src("dev/*.html")
+        .src('dev/*.html')
         .pipe(plumber())
         .pipe(
             strip({
-                safe: "<!--[if",
+                safe: '<!--[if',
             })
         )
         .pipe(
             fileinclude({
-                prefix: "@@",
-                basepath: "@file",
+                prefix: '@@',
+                basepath: '@file',
             })
         )
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(version(versionConfig))
-        .pipe(gulp.dest("dist/"))
+        .pipe(gulp.dest('dist/'))
         .pipe(bs.stream());
 }

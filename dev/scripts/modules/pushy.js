@@ -1,8 +1,8 @@
-!(function(a) {
+!(function (a) {
     function b() {
         g.hasClass(k) ? h.toggleClass(l) : h.toggleClass(m),
             q &&
-                g.one("transitionend", function() {
+                g.one('transitionend', function () {
                     q.focus();
                 });
     }
@@ -16,38 +16,38 @@
             ? (h.addClass(l),
               g.animate(
                   {
-                      left: "0px"
+                      left: '0px',
                   },
                   r
               ),
               i.animate(
                   {
-                      left: s
+                      left: s,
                   },
                   r
               ),
               j.animate(
                   {
-                      left: s
+                      left: s,
                   },
                   r
               ))
             : (h.addClass(m),
               g.animate(
                   {
-                      right: "0px"
+                      right: '0px',
                   },
                   r
               ),
               i.animate(
                   {
-                      right: s
+                      right: s,
                   },
                   r
               ),
               j.animate(
                   {
-                      right: s
+                      right: s,
                   },
                   r
               )),
@@ -59,38 +59,38 @@
             ? (h.removeClass(l),
               g.animate(
                   {
-                      left: "-" + s
+                      left: '-' + s,
                   },
                   r
               ),
               i.animate(
                   {
-                      left: "0px"
+                      left: '0px',
                   },
                   r
               ),
               j.animate(
                   {
-                      left: "0px"
+                      left: '0px',
                   },
                   r
               ))
             : (h.removeClass(m),
               g.animate(
                   {
-                      right: "-" + s
+                      right: '-' + s,
                   },
                   r
               ),
               i.animate(
                   {
-                      right: "0px"
+                      right: '0px',
                   },
                   r
               ),
               j.animate(
                   {
-                      right: "0px"
+                      right: '0px',
                   },
                   r
               ));
@@ -98,87 +98,79 @@
 
     function f() {
         a(t).addClass(v),
-            a(t).on("click", function() {
+            a(t).on('click', function () {
                 var b = a(this);
                 b.hasClass(v)
-                    ? (a(t)
-                          .addClass(v)
-                          .removeClass(u),
-                      b.removeClass(v).addClass(u))
+                    ? (a(t).addClass(v).removeClass(u), b.removeClass(v).addClass(u))
                     : b.addClass(v).removeClass(u);
             });
     }
-    var g = a(".pushy"),
-        h = a("body"),
-        i = a("#container"),
-        j = a(".push"),
-        k = "pushy-left",
-        l = "pushy-open-left",
-        m = "pushy-open-right",
-        n = a(".site-overlay"),
-        o = a(".btn-burger, .pushy-link"),
-        p = a(".btn-burger"),
-        q = a(g.data("focus")),
+    var g = a('.pushy'),
+        h = a('body'),
+        i = a('#container'),
+        j = a('.push'),
+        k = 'pushy-left',
+        l = 'pushy-open-left',
+        m = 'pushy-open-right',
+        n = a('.site-overlay'),
+        o = a('.btn-burger, .pushy-link'),
+        p = a('.btn-burger'),
+        q = a(g.data('focus')),
         r = 200,
-        s = g.width() + "px",
-        t = ".pushy-submenu",
-        u = "pushy-submenu-open",
-        v = "pushy-submenu-closed";
+        s = g.width() + 'px',
+        t = '.pushy-submenu',
+        u = 'pushy-submenu-open',
+        v = 'pushy-submenu-closed';
     a(t);
-    a(document).keyup(function(a) {
-        27 == a.keyCode &&
-            (h.hasClass(l) || h.hasClass(m)) &&
-            (w ? c() : (e(), (x = !1)), p && p.focus());
+    a(document).keyup(function (a) {
+        27 == a.keyCode && (h.hasClass(l) || h.hasClass(m)) && (w ? c() : (e(), (x = !1)), p && p.focus());
     });
-    var w = (function() {
-        var a = document.createElement("p"),
+    var w = (function () {
+        var a = document.createElement('p'),
             b = !1,
             c = {
-                webkitTransform: "-webkit-transform",
-                OTransform: "-o-transform",
-                msTransform: "-ms-transform",
-                MozTransform: "-moz-transform",
-                transform: "transform"
+                webkitTransform: '-webkit-transform',
+                OTransform: '-o-transform',
+                msTransform: '-ms-transform',
+                MozTransform: '-moz-transform',
+                transform: 'transform',
             };
         if (null !== document.body) {
             document.body.insertBefore(a, null);
             for (var d in c)
                 void 0 !== a.style[d] &&
-                    ((a.style[d] = "translate3d(1px,1px,1px)"),
+                    ((a.style[d] = 'translate3d(1px,1px,1px)'),
                     (b = window.getComputedStyle(a).getPropertyValue(c[d])));
-            return (
-                document.body.removeChild(a),
-                void 0 !== b && b.length > 0 && "none" !== b
-            );
+            return document.body.removeChild(a), void 0 !== b && b.length > 0 && 'none' !== b;
         }
         return !1;
     })();
     if (w)
         f(),
-            o.on("click", function() {
+            o.on('click', function () {
                 b();
             }),
-            n.on("click", function() {
+            n.on('click', function () {
                 b();
             });
     else {
-        h.addClass("no-csstransforms3d"),
+        h.addClass('no-csstransforms3d'),
             g.hasClass(k)
                 ? g.css({
-                      left: "-" + s
+                      left: '-' + s,
                   })
                 : g.css({
-                      right: "-" + s
+                      right: '-' + s,
                   }),
             i.css({
-                "overflow-x": "hidden"
+                'overflow-x': 'hidden',
             });
         var x = !1;
         f(),
-            o.on("click", function() {
+            o.on('click', function () {
                 x ? (e(), (x = !1)) : (d(), (x = !0));
             }),
-            n.on("click", function() {
+            n.on('click', function () {
                 x ? (e(), (x = !1)) : (d(), (x = !0));
             });
     }

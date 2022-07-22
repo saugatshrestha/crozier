@@ -4,7 +4,7 @@
 //    90% { opacity: 0; }
 //}
 @mixin keyframes($name) {
-  @keyframes #{$name} {
-    @content;
-  }
+    @keyframes #{$name} {
+        @content;
+    }
 }

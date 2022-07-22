@@ -4,7 +4,7 @@ import gulpIf from 'gulp-if';
 const isProd = process.env.NODE_ENV === 'prod';
 export function images() {
     return gulp
-        .src("dev/images/**/*")
+        .src('dev/images/**/*')
         .pipe(
             gulpIf(
                 isProd,
@@ -16,8 +16,8 @@ export function images() {
                 })
             )
         )
-        .pipe(gulp.dest("dist/images"));
+        .pipe(gulp.dest('dist/images'));
 }
 export function fonts() {
-    return gulp.src(["dev/fonts/**"]).pipe(gulp.dest("dist/fonts"));
+    return gulp.src(['dev/fonts/**/*']).pipe(gulp.dest('dist/fonts'));
 }
