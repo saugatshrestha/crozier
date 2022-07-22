@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('includes/head.html',{'pageTitle':'Rubicon - Completed Leadspaces'})
+    </head>
+
+    <body>
+        <div class="theme-app d-flex flex-column">
+            <div class="theme-wrap position-relative">
+                <main class="theme-main pt-0">
+                    <div class="container">
+                        <header class="py-10">
+                            <div class="row">
+                                <div class="col">
+                                    <header class="heading-d01 text-center">
+                                        <h2 class="display-2">Hero Sections</h2>
+                                        <p>
+                                            Heading title design 01. Feel free
+                                            to use anywhere you need.
+                                        </p>
+                                    </header>
+                                    <hr class="mt-10" />
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+
+                    <h4 class="px-8 text-primary">Leadspace - Button enabled <span class="text-gray-4 ml-2">[Intro Opt 24]</span></h4>
+                    @@include('includes/modules/above-the-fold/leadspace.html', {
+                        'imgPath': 'images/hero-04@2x.jpg',
+                        'leadspaceTopOverlayOpacity': 'leadspace--top-overlay-opacity-2',
+                        'leadspaceFullOverlayOpacity': 'leadspace--full-overlay-opacity-3',
+                        'imgTitle': 'Title here',
+                        'eyebrowShowHide': 'd-block',
+                        'heroEyebrow': 'RUBICON CONNECT &#8482;',
+                        'figureShowHide': 'd-none',
+                        'logoPath': 'images/logo-full@2x.png',
+                        'logoTitle': 'Title here',
+                        'textBanner': 'The smartest way to manage waste for small businesses',
+                        'btnTxtShowHide': 'd-block',
+                        'textBtn': 'Play Video',
+                    })
+                    <hr class="my-9">
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

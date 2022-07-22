@@ -1,0 +1,21 @@
+.#{$global} {
+    &-app {
+        min-height: 100vh;
+    }
+    &-wrap {
+        flex: 1 0 auto;
+    }
+    &-main {
+        background-color: $white;
+    }
+}
+
+.site-overlay {
+    @extend .w-100;
+    @extend .h-100;
+    @extend .position-fixed;
+    @extend .position-lt-0;
+    @extend .opacity-0;
+    @extend .transition-fast;
+    @extend .zindex-n-1;
+}

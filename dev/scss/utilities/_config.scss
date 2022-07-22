@@ -1,0 +1,95 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: auto;
+    font-size: 10px;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    // Makes the smooth scrolling on ios devices
+}
+
+body {
+    letter-spacing: normal;
+    @include font-smoothing(on);
+    font-size: rem(17px);
+    line-height: rem(28px);
+
+    &.prevent-scrolling {
+        @extend .overflow-hidden, .position-fixed, .w-100;
+        top: auto;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+a,
+button,
+.btn {
+    @extend .transition-fast;
+}
+
+p {
+    margin-bottom: rem(32px);
+
+    &:last-child {
+        @extend .mb-0;
+    }
+}
+
+ul,
+ol {
+    padding-left: rem(20px);
+
+    > li {
+        padding-left: rem(4px);
+        margin-bottom: rem(10px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::marker {
+            color: $primary;
+        }
+    }
+}
+
+b,
+strong {
+    font-weight: $font-weight-bold;
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+button,
+.btn,
+.btn-link {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 130px $white inset !important;
+}

@@ -1,0 +1,17 @@
+.media {
+    &-business {
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+        i {
+            font-size: rem(23px);
+            margin-top: rem(4px);
+        }
+        .media-body {
+            p {
+                font-size: rem(14px);
+                line-height: rem(20px);
+            }
+        }
+    }
+}

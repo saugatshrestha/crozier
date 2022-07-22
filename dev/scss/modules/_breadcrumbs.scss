@@ -1,0 +1,29 @@
+.breadcrumb {
+    &-item {
+        font-size: rem(13px);
+        line-height: rem(24px);
+        font-weight: $font-weight-bold;
+        margin-left: rem(8px);
+        &::after {
+            content: "\e904";
+            @include icons-pseudo;
+            font-size: rem(10px);
+            line-height: rem(10px);
+            margin-left: rem(8px);
+            display: inline-block;
+            vertical-align: middle;
+            color: inherit;
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+        &.active {
+            color: $primary;
+        }
+    }
+}

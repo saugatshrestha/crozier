@@ -1,0 +1,42 @@
+.#{$global} {
+    &-header {
+        background-color: transparent;
+        height: rem(89px);
+        border-bottom: 1px solid white(0.2);
+
+        &--dark {
+            // background-color: $white;
+            border-bottom: 1px solid $gray-900;
+        }
+    }
+}
+
+.pushy-open-right {
+    .theme-header {
+        // border-bottom: 1px solid $white;
+        z-index: 100 !important;
+        transform: none;
+        position: fixed !important;
+        background-color: $white;
+        @extend .theme-header--dark;
+    }
+}
+
+// Additional controls to show mobile nav under 1200px viewport width
+.primary-links {
+    @media (min-width: 1200px) {
+        display: flex !important;
+    }
+}
+
+.hamburger-wrap {
+    @media (min-width: 1200px) {
+        display: none !important;
+    }
+}
+
+.navbar-brand {
+    @media (min-width: 1200px) {
+        flex-grow: 0 !important;
+    }
+}

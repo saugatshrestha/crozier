@@ -1,0 +1,86 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
+    @extend %heading;
+}
+
+h1,
+.h1,
+.display-1 {
+    font-size: rem(38px);
+    line-height: rem(48px);
+    @include media-breakpoint-up(sm) {
+        font-size: rem(44px);
+        line-height: rem(56px);
+    }
+    @include media-breakpoint-up(md) {
+        font-size: rem(56px);
+        line-height: rem(72px);
+    }
+}
+
+h1,
+.h1,
+.display-1 {
+    @include media-breakpoint-up(lg) {
+        font-size: rem(72px);
+        line-height: rem(80px);
+    }
+}
+
+h2,
+.h2 {
+    font-size: rem(28px);
+    line-height: rem(32px);
+    @include media-breakpoint-up(sm) {
+        font-size: rem(32px);
+        line-height: rem(40px);
+    }
+    @include media-breakpoint-up(md) {
+        font-size: rem(34px);
+        line-height: rem(44px);
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: rem(38px);
+        line-height: rem(48px);
+    }
+}
+
+h3,
+.h3 {
+    font-size: rem(24px);
+    line-height: rem(32px);
+    @include media-breakpoint-up(sm) {
+        font-size: rem(28px);
+        line-height: rem(32px);
+    }
+}
+
+h4,
+.h4 {
+    font-size: rem(22px);
+    line-height: rem(28px);
+    @include media-breakpoint-up(sm) {
+        font-size: rem(24px);
+        line-height: rem(32px);
+    }
+}
+
+h5,
+.h5 {
+    font-size: rem(20px);
+    line-height: rem(28px);
+}
+
+h6,
+.h6 {
+    font-size: rem(17px);
+    line-height: rem(28px);
+}
