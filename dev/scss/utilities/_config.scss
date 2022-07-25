@@ -14,8 +14,10 @@ body {
 body {
     letter-spacing: normal;
     @include font-smoothing(on);
-    font-size: 1.8rem;
-    line-height: 2.8rem;
+    font-size: 16px;
+    line-height: 1.76rem;
+    font-family: 'Favorit';
+    font-weight: $font-weight-light;
 
     &.prevent-scrolling {
         @extend .overflow-hidden, .position-fixed, .w-100;
@@ -69,7 +71,7 @@ ol {
 
 b,
 strong {
-    font-weight: $font-weight-bold;
+    font-weight: 500;
 }
 
 figure {
@@ -92,4 +94,11 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     box-shadow: 0 0 0 13rem $white inset !important;
+}
+
+
+h4 {
+    @include media-breakpoint-between(sm, md) {
+        font-size: 10px;
+    }
 }

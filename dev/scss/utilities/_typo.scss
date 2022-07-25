@@ -4,74 +4,159 @@ h3,
 h4,
 h5,
 h6,
+h7,
+h8,
+h9,
 .h1,
 .h2,
 .h3,
-.h4 {
+.h4,
+.h5,
+.h6, 
+.h7,
+.h8,
+.h9 {
     @extend %heading;
+    letter-spacing: -2%;
+}
+
+h6,
+.h6,
+h7,
+.h7,
+h8,
+.h8,
+h9,
+.h9,
+p {
+    font-family: 'Favorit';
 }
 
 h1,
 .h1,
 .display-1 {
-    font-size: 4rem;
-    line-height: 4rem;
-
+    font-size: 5.6rem;
+    line-height: 5.32rem;
     @include media-breakpoint-up(xl) {
-        font-size: 6.4rem;
-        line-height: 6.4rem;
+        font-size: 12rem;
+        line-height: 11.4rem;
     }
 }
 
 h2,
 .h2 {
-    font-size: 2.8rem;
-    line-height: 2.8rem;
+    font-size: 4.8rem;
+    line-height: 4.56rem;
     @include media-breakpoint-up(xl) {
-        font-size: 4.4rem;
-        line-height: 4.4rem;
+        font-size: 8rem;
+        line-height: 7.6rem;
     }
 }
 
 h3,
 .h3 {
-    font-size: 2.6rem;
-    line-height: 2.6rem;
+    font-size: 4rem;
+    line-height: 3.8rem;
     @include media-breakpoint-up(xl) {
-        font-size: 3.6rem;
-        line-height: 3.6rem;
+        font-size: 6.4rem;
+        line-height: 6.08rem;
     }
 }
 
 h4,
 .h4 {
-    font-size: 2.4rem;
-    line-height: 2.4rem;
+    font-size: 3.2rem;
+    line-height: 3.04rem;
     @include media-breakpoint-up(xl) {
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 4.8rem;
+        line-height: 4.56rem;
     }
 }
 
 h5,
-.h5,
-.body-1,
-body {
-    font-size: 2.2rem;
-    line-height: 2.3rem;
+.h5 {
+    font-size: 2.4rem;
+    line-height: 2.28rem;
     @include media-breakpoint-up(xl) {
-        font-size: 2.6rem;
-        line-height: 2.8rem;
+        font-size: 3.2rem;
+        line-height: 3.04rem;
     }
 }
 
 h6,
 .h6 {
-    font-size: 1.6rem;
-    line-height: 2rem;
+    font-size: 2.4rem;
+    line-height: 2.64rem;
+    @include media-breakpoint-up(xl) {
+        font-size: 3.2rem;
+        line-height: 3.52rem;
+    }
+}
+
+h7,
+.h7 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    @include media-breakpoint-up(xl) {
+        font-size: 2.6rem;
+        line-height: 2.86rem;
+    }
+}
+
+h8,
+.h8 {
+    letter-spacing: -1%;
+    font-size: 1.8rem;
+    line-height: 1.98rem;
     @include media-breakpoint-up(xl) {
         font-size: 2rem;
-        line-height: 2.4rem;
+        line-height: 2.2rem;
+    }
+}
+
+h9,
+.h9 {
+    letter-spacing: 0px;
+    font-size: 1.4rem;
+    line-height: 1.54rem;
+    @include media-breakpoint-up(xl) {
+        font-size: 1.6rem;
+        line-height: 1.76rem;
+    }
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.76rem;
+    &.p1 {
+        font-size: 1.7rem;
+        line-height: 1.87rem;
+        letter-spacing: -1%;
+        font-weight: 300;
+        @include media-breakpoint-up(xl) {
+            font-size: 2rem;
+            line-height: 2.2rem;
+        }
+    }
+    &.p2 {
+        font-weight: 300;
+        font-family: 'Favorit';
+        font-size: 1.4rem;
+        line-height: 1.54rem;
+        @include media-breakpoint-up(xl) {
+            font-size: 1.6rem;
+            line-height: 1.76rem;   
+        }
+    }
+}
+
+.tags {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.32rem;
+    @include media-breakpoint-up(xl) {
+        font-size: 1.4rem;
+        line-height: 1.54rem;
     }
 }
 

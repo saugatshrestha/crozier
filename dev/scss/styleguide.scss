@@ -2,6 +2,15 @@
     font-size: 1rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'GT Super Ds Trial';
+}
+
 .styleguide {
     &-wrap {
         padding: 15px 15px 0;
@@ -12,8 +21,9 @@
     &-header {
         border-bottom: 1px solid #d8d8d8;
         padding: 0 0 20px;
+        margin: 0 0 10px;
         h4 {
-            font-size: 35px;
+            font-size: 40px;
         }
     }
 }
@@ -34,7 +44,7 @@
         > a {
             color: #002b49;
             text-decoration: none;
-            font-size: 22px;
+            font-size: 20px;
             &:hover,
             &:focus {
                 color: #000;
@@ -43,7 +53,7 @@
                 display: none;
             }
             &.active {
-                color: #00a6cb;
+                color: #FF5C39;
             }
         }
     }
@@ -98,4 +108,24 @@
 
 .contentwrapper {
     padding-left: 50px;
+}
+
+.box {
+    p {
+        line-height: 24px;
+    }
+}
+
+#branding {
+    span {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+#icons {
+    code {
+        display: inline-block;
+        margin: 10px 0 0;
+    }
 }

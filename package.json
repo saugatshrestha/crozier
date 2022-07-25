@@ -4,8 +4,8 @@
   "description": "A simple starter template for setting up a ECMAScript 6 project with barba.js and webpack.",
   "main": "app.js",
   "scripts": {
-    "dev": "NODE_ENV=development gulp --require @babel/register",
-    "build": "NODE_ENV=production gulp build --require @babel/register",
+    "dev": "gulp --require @babel/register",
+    "build": "gulp build --require @babel/register",
     "prettier": "prettier --write src/",
     "lint:css": "stylelint \"**/*.{css,less,styl,scss,sass,sss,tsx}\" --ignore-path .gitignore",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,scss}\" --ignore-path .gitignore",
